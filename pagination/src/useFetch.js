@@ -13,8 +13,7 @@ export const useFetch = () => {
     try {
       const response = await axios.get(url);
       const { data } = response;
-      paginate(data);
-      setData(data);
+      setData(paginate(data));
       setLoading(false);
     } catch (err) {
       console.log(err);

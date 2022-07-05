@@ -4,9 +4,9 @@ const paginate = (followers) => {
 
   const newFollowers = Array.from({ length: pages }, (_, index) => {
     const start = index * RES_PER_PAGE;
-
     return followers.slice(start, start + RES_PER_PAGE);
   });
+  return newFollowers;
 };
 
 export default paginate;
